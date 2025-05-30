@@ -4,8 +4,21 @@
     "src/**/*.ts",
     "index.ts",
     "!**/*.d.ts",
-    "!**/node_modules/**"
+    "!**/node_modules/**",
+    "!**/*.test.ts"
   ],
   "preset": "ts-jest",
-  "testMatch": ["**/test/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"]
+  "testMatch": [
+    "**/test/**/*.test.[jt]s?(x)",
+    "**/src/**/*.test.[jt]s?(x)"
+  ],
+  "coverageReporters": ["text", "lcov"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 80,
+      "functions": 80,
+      "lines": 80,
+      "statements": 80
+    }
+  }
 }
