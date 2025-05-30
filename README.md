@@ -37,10 +37,27 @@ Output:
 
 ![Screenshot](https://cdn.jsdelivr.net/gh/console-table-printer/table-printer-cli@master/static-resources/quick-print.v3.png)
 
-You can also pipe the input from stdin
+You can also pipe the input from stdin:
 
 ```bash
 echo '[{ "id":3, "text":"like" }, {"id":4, "text":"tea"}]' | ctp -s
+```
+
+### Using Table Options
+
+You can customize the table output using the `--tableOptions` parameter. This accepts the same options as the [console-table-printer](https://www.npmjs.com/package/console-table-printer) library.
+
+Example with table options:
+
+```bash
+# Color the entire table red
+ctp -i '[{"id":1,"name":"John"},{"id":2,"name":"Jane"}]' --tableOptions '{"style": {"headerColor": "red", "color": "red"}}'
+
+# Use custom column styles
+ctp -i '[{"id":1,"status":"active"},{"id":2,"status":"inactive"}]' --tableOptions '{"columns": [{"name": "status", "color": "green"}]}'
+
+# Change table title
+ctp -i '[{"id":1,"name":"John"}]' --tableOptions '{"title": "Users List"}'
 ```
 
 ## Detailed usage
@@ -49,9 +66,10 @@ echo '[{ "id":3, "text":"like" }, {"id":4, "text":"tea"}]' | ctp -s
 Usage: ctp [options]
 
 Options:
-  -i, --input <value>  input string
-  -s, --stdin          read input from stdin
-  -h, --help           display help for command
+  -i, --input <value>         input string
+  -s, --stdin                 read input from stdin
+  -t, --tableOptions <value>  table options in JSON format
+  -h, --help                  display help for command
 ```
 
 ## License
