@@ -50,9 +50,6 @@ You can customize the table output using the `--tableOptions` parameter. This ac
 Example with table options:
 
 ```bash
-# Color the entire table red
-ctp -i '[{"id":1,"name":"John"},{"id":2,"name":"Jane"}]' --tableOptions '{"style": {"headerColor": "red", "color": "red"}}'
-
 # Use custom column styles
 ctp -i '[{"id":1,"status":"active"},{"id":2,"status":"inactive"}]' --tableOptions '{"columns": [{"name": "status", "color": "green"}]}'
 

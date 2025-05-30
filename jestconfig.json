@@ -1,4 +1,5 @@
 {
   "collectCoverage": true,
-  "preset": "ts-jest"
+  "preset": "ts-jest",
+  "testMatch": ["**/test/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"]
 }
