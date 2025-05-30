@@ -35,7 +35,7 @@ ctp -i '[{ "id":3, "text":"like" }, {"id":4, "text":"tea"}]'
 
 Output:
 
-![Screenshot](https://cdn.jsdelivr.net/gh/ayonious/table-printer-cli@master/static-resources/quick-print.v3.png)
+![Screenshot](https://cdn.jsdelivr.net/gh/console-table-printer/table-printer-cli@master/static-resources/quick-print.v3.png)
 
 You can also pipe the input from stdin
 
@@ -56,4 +56,4 @@ Options:
 
 ## License
 
-[MIT](https://github.com/ayonious/table-printer-cli/blob/master/LICENSE)
+[MIT](https://github.com/console-table-printer/table-printer-cli/blob/master/LICENSE)
