@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/console-table-printer/table-printer-cli/compare/v1.2.0...v1.2.1) (2025-05-30)
+
+
+### Bug Fixes
+
+* Fixing doc about styling ([#347](https://github.com/console-table-printer/table-printer-cli/issues/347)) ([e6acefc](https://github.com/console-table-printer/table-printer-cli/commit/e6acefcab4b481d816d93cde5974126f6e6803b2))
+
 # [1.2.0](https://github.com/console-table-printer/table-printer-cli/compare/v1.1.7...v1.2.0) (2025-05-30)
 
 
