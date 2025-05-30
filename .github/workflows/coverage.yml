@@ -32,4 +32,4 @@ jobs:
         file: ./coverage/lcov.info
         flags: unittests
         name: codecov-umbrella
-        fail_ci_if_error: false 
+        fail_ci_if_error: true
