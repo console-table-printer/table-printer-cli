@@ -64,8 +64,7 @@ typings/
 # next.js build output
 .next
 
-# tests (not to add tests when publishing)
-test
+# Coverage output
 coverage
 
 # jest configuration
