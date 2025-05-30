@@ -1,4 +1,9 @@
 export const isValidJson = (str: string): Boolean => {
+  if (!str) {
+    console.error('Input is required');
+    return false;
+  }
+
   try {
     const jsonObj = JSON.parse(str);
     if (!Array.isArray(jsonObj)) {
@@ -12,9 +17,19 @@ export const isValidJson = (str: string): Boolean => {
   }
 };
 
-export const verifyInput = (inp: string): Boolean => isValidJson(inp);
+export const verifyInput = (inp: string): Boolean => {
+  if (inp === undefined || inp === null) {
+    console.error('Input is required');
+    return false;
+  }
+  return isValidJson(inp);
+};
 
 export const verifyTableOptions = (options: string): boolean => {
+  if (!options) {
+    console.error('Table options are required');
+    return false;
+  }
   try {
     JSON.parse(options);
     return true;

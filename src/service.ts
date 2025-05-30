@@ -18,10 +18,15 @@ const parseAndValidateInput = (inp: string, tableOptions?: string): ParsedInput 
     return null;
   }
 
-  return {
-    data: JSON.parse(inp),
-    options: tableOptions && JSON.parse(tableOptions)
-  };
+  try {
+    return {
+      data: JSON.parse(inp),
+      options: tableOptions && JSON.parse(tableOptions)
+    };
+  } catch (err) {
+    console.log(`not a valid input ${inp}`);
+    return null;
+  }
 };
 
 const printTableFromInp = (inp: string, tableOptions?: string): void | string => {
