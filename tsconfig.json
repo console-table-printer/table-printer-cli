@@ -10,6 +10,6 @@
     "strict": true,
     "types": ["jest", "node"]
   },
-  "include": ["src/**/*", "index.ts", "src/inputVerifier.test.ts", "src/service.test.ts"],
-  "exclude": ["src/**/*.test.ts", "src/**/*.spec.ts", "test/**/*"]
+  "include": ["src/**/*", "index.ts"],
+  "exclude": ["src/**/*.test.ts", "test/**/*"]
 }

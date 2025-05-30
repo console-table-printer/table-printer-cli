@@ -1,4 +1,10 @@
 {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "moduleDirectories": ["node_modules", "src"],
+  "moduleFileExtensions": ["ts", "js", "json"],
+  "roots": ["<rootDir>"],
+  "testMatch": ["<rootDir>/src/**/*.test.ts", "<rootDir>/test/**/*.test.ts"],
   "collectCoverage": true,
   "collectCoverageFrom": [
     "src/**/*.ts",
@@ -7,10 +13,6 @@
     "!**/node_modules/**",
     "!**/*.test.ts"
   ],
-  "preset": "ts-jest",
-  "roots": ["<rootDir>/src", "<rootDir>/test"],
-  "testRegex": ".*\\.test\\.ts$",
-  "moduleDirectories": ["node_modules", "<rootDir>"],
   "coverageReporters": ["text", "lcov"],
   "coverageThreshold": {
     "global": {
