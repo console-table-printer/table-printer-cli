@@ -1,3 +1,13 @@
+## [1.1.7](https://github.com/console-table-printer/table-printer-cli/compare/v1.1.6...v1.1.7) (2025-05-30)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#329](https://github.com/console-table-printer/table-printer-cli/issues/329)) ([98e3e4e](https://github.com/console-table-printer/table-printer-cli/commit/98e3e4e15cd2d5808668434df149b3053d925357))
+* **deps:** update dependency console-table-printer to ^2.7.5 ([5c6b95f](https://github.com/console-table-printer/table-printer-cli/commit/5c6b95f8d3da3310160fbeabbe893d4c0cfae306))
+* Update basic ctp ([#343](https://github.com/console-table-printer/table-printer-cli/issues/343)) ([892f2ec](https://github.com/console-table-printer/table-printer-cli/commit/892f2ec0242992a39f2dad5c1047e8cc8ba782fc))
+* Update dependencies and docs ([#338](https://github.com/console-table-printer/table-printer-cli/issues/338)) ([abdd3e8](https://github.com/console-table-printer/table-printer-cli/commit/abdd3e8c0e7818e029ae8b866b14105267a32c41))
+
 ## [1.1.6](https://github.com/ayonious/table-printer-cli/compare/v1.1.5...v1.1.6) (2020-12-06)
 
 
