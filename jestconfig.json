@@ -8,10 +8,9 @@
     "!**/*.test.ts"
   ],
   "preset": "ts-jest",
-  "testMatch": [
-    "<rootDir>/**/test/**/*.test.[jt]s?(x)",
-    "<rootDir>/**/src/**/*.test.[jt]s?(x)"
-  ],
+  "roots": ["<rootDir>/src", "<rootDir>/test"],
+  "testRegex": ".*\\.test\\.ts$",
+  "moduleDirectories": ["node_modules", "<rootDir>"],
   "coverageReporters": ["text", "lcov"],
   "coverageThreshold": {
     "global": {
