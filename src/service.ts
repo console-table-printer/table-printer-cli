@@ -1,4 +1,4 @@
-import { printTable } from 'console-table-printer';
+import { Table } from 'console-table-printer';
 
 import { verifyInput, verifyTableOptions } from './inputVerifier';
 
@@ -36,11 +36,13 @@ const printTableFromInp = (inp: string, tableOptions?: string): void | string =>
   const { data, options } = parsed;
 
   console.log(options);
-  if (options) {
-    printTable(data, options);
-  } else {
-    printTable(data);
+  const table = new Table(options);
+  
+  if (Array.isArray(data) && data.length > 0) {
+    data.forEach(row => table.addRow(row));
   }
+  
+  table.printTable();
 };
 
 export default printTableFromInp;
