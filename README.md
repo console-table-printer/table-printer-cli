@@ -1,28 +1,11 @@
-<h1 align="center">table-printer-cli</h1>
-<h3 align="center">📟🍭Printing Pretty Tables on your terminal</h3>
-<p align="center">
-  <a href="https://dl.circleci.com/status-badge/redirect/gh/ayonious/table-printer-cli/tree/master"><img src="https://dl.circleci.com/status-badge/img/gh/ayonious/table-printer-cli/tree/master.svg?style=svg"></a>
-  <a href="https://codecov.io/gh/ayonious/table-printer-cli">
-    <img alt="codecov" src="https://codecov.io/gh/ayonious/table-printer-cli/branch/master/graph/badge.svg">
-  </a>
-  <a href="https://badge.fury.io/js/table-printer-cli">
-    <img alt="npm version" src="https://badge.fury.io/js/table-printer-cli.svg">
-  </a>
-  <a href="https://packagephobia.now.sh/result?p=table-printer-cli">
-    <img alt="install size" src="https://packagephobia.now.sh/badge?p=table-printer-cli@latest">
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/prettier/prettier">
-    <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=plastic">
-  </a>
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fayonious%2Ftable-printer-cli?ref=badge_shield" alt="FOSSA Status">
-    <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fayonious%2Ftable-printer-cli.svg?type=shield"/>
-  </a>
-  <a href="https://github.com/semantic-release/semantic-release">
-    <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
-  </a>
-</p>
+# table-printer-cli
+
+### 📟🍭Printing Pretty Tables on your terminal
+
+[![codecov](https://codecov.io/gh/console-table-printer/table-printer-cli/graph/badge.svg?token=xSI9V5U9S9)](https://codecov.io/gh/console-table-printer/table-printer-cli)
+[![npm version](https://badge.fury.io/js/table-printer-cli.svg)](https://badge.fury.io/js/table-printer-cli)
+[![install size](https://packagephobia.now.sh/badge?p=table-printer-cli@latest)](https://packagephobia.now.sh/result?p=table-printer-cli)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Synopsis
 
