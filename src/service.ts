@@ -35,7 +35,6 @@ const printTableFromInp = (inp: string, tableOptions?: string): void | string =>
 
   const { data, options } = parsed;
 
-  console.log(options);
   const table = new Table(options);
   
   if (Array.isArray(data) && data.length > 0) {
