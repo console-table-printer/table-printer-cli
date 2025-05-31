@@ -68,7 +68,9 @@ describe('Jest Test Discovery', () => {
 
     // Expected patterns
     const expectedPatterns = [
-      '<rootDir>/test/**/*.test.ts'
+      '<rootDir>/test/**/*.test.ts',
+      "<rootDir>/src/**/*.test.ts",
+      "<rootDir>/index.test.ts"
     ];
 
     expect(testPatterns).toEqual(expectedPatterns);

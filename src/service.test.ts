@@ -13,7 +13,7 @@ jest.mock('console-table-printer', () => ({
   Table: MockTable
 }));
 
-jest.mock('../../../src/inputVerifier', () => ({
+jest.mock('./inputVerifier', () => ({
   verifyInput: jest.fn(),
   verifyTableOptions: jest.fn(),
 }));
