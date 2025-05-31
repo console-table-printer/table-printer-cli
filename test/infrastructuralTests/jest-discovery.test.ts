@@ -21,7 +21,10 @@ describe('Jest Test Discovery', () => {
     const expectedFiles = [
       'test/readmeExamples/basicExamples.test.ts',
       'test/readmeExamples/tableOptions.test.ts',
-      'test/infrastructuralTests/jest-discovery.test.ts'
+      'test/infrastructuralTests/jest-discovery.test.ts',
+      'test/unitTests/index.test.ts',
+      'test/unitTests/src/service.test.ts',
+      'test/unitTests/src/inputVerifier.test.ts',
     ].map(file => path.join(process.cwd(), file));
 
     // Extract detected test files from Jest output
