@@ -16,7 +16,6 @@ export function runCLI(argv: string[] = process.argv) {
   const options = program.opts();
 
   if (options.input) {
-    console.log('program.input', options.input);
     printTableFromInp(options.input, options.tableOptions);
   } else if (options.stdin) {
     printTableFromInp(fs.readFileSync(0).toString(), options.tableOptions);
