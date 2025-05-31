@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/console-table-printer/table-printer-cli/compare/v1.2.2...v1.2.3) (2025-05-31)
+
+
+### Bug Fixes
+
+* remove undefined logs on console ([#353](https://github.com/console-table-printer/table-printer-cli/issues/353)) ([2b04ae4](https://github.com/console-table-printer/table-printer-cli/commit/2b04ae44ee7f30693fdbc90de5097504961eb864))
+
 ## [1.2.2](https://github.com/console-table-printer/table-printer-cli/compare/v1.2.1...v1.2.2) (2025-05-31)
 
 
