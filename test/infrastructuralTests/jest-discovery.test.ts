@@ -22,6 +22,7 @@ describe('Jest Test Discovery', () => {
       'test/readmeExamples/basicExamples.test.ts',
       'test/readmeExamples/tableOptions.test.ts',
       'test/infrastructuralTests/jest-discovery.test.ts',
+      'test/infrastructuralTests/dist-contents.test.ts',
       'src/inputVerifier.test.ts',
       'src/service.test.ts',
       'index.test.ts'
