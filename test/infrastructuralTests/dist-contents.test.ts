@@ -1,6 +1,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+// Why this test is needed:
+// - To ensure that the dist folder contains only the compiled source files.
+// - Often I accidentally put the tests file in it
 describe('Dist Folder Contents', () => {
   // Get path to dist folder
   const distPath = path.join(process.cwd(), 'dist');
