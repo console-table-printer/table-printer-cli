@@ -34,6 +34,8 @@ describe('Jest Test Discovery', () => {
       .map(line => line.trim())
       .filter(Boolean);
 
+    console.log("detectedFiles", detectedFiles);
+
     // Verify each expected file exists
     expectedFiles.forEach(file => {
       expect(fs.existsSync(file)).toBe(true);
