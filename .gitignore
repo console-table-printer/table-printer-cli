@@ -77,8 +77,6 @@ tsconfig.json
 renovate.json
 .travis.yml
 static-resources
-src
-index.ts
 .huskyrc.json
 .prettierrc
 .prettierignore

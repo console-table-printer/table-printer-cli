@@ -1,10 +1,8 @@
 {
   "preset": "ts-jest",
   "testEnvironment": "node",
-  "moduleDirectories": ["node_modules", "src"],
   "moduleFileExtensions": ["ts", "js", "json"],
-  "roots": ["<rootDir>"],
-  "testMatch": ["<rootDir>/src/**/*.test.ts", "<rootDir>/test/**/*.test.ts"],
+  "testMatch": ["<rootDir>/test/**/*.test.ts","<rootDir>/src/**/*.test.ts", "<rootDir>/index.test.ts"],
   "collectCoverage": true,
   "collectCoverageFrom": [
     "src/**/*.ts",

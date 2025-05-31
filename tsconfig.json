@@ -10,6 +10,15 @@
     "strict": true,
     "types": ["jest", "node"]
   },
-  "include": ["src/**/*", "index.ts"],
-  "exclude": ["src/**/*.test.ts", "test/**/*"]
+  "include": [
+    "src/**/*",
+    "index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "test/**/*",
+    "**/*.test.ts"
+  ]
 }
