@@ -27,46 +27,53 @@ yarn global add table-printer-cli
 
 ## Basic Example
 
-Try this on your terminal.
+Try this simple example first:
 
 ```bash
-ctp -i '[{ "id":3, "text":"like" }, {"id":4, "text":"tea"}]'
+ctp -i '[{"name":"Alice","score":95},{"name":"Bob","score":82}]'
 ```
 
-Output:
+![Basic Example](https://cdn.jsdelivr.net/gh/console-table-printer/table-printer-cli@master/static-resources/1.quick-print.v4.png)
 
-![Screenshot](https://cdn.jsdelivr.net/gh/console-table-printer/table-printer-cli@master/static-resources/quick-print.v3.png)
-
-You can also pipe the input from stdin:
+You can also pipe JSON data from other commands:
 
 ```bash
-echo '[{ "id":3, "text":"like" }, {"id":4, "text":"tea"}]' | ctp -s
+# Pipe data from another command
+echo '[{"name":"Alice","role":"Developer"},{"name":"Bob","role":"Designer"}]' | ctp -s
 ```
+
+![Pipe Example](https://cdn.jsdelivr.net/gh/console-table-printer/table-printer-cli@master/static-resources/2.pipe-data.v1.png)
 
 ### Using Table Options
 
-You can customize the table output using the `--tableOptions` parameter. This accepts the same options as the [console-table-printer](https://www.npmjs.com/package/console-table-printer) library.
-
-Example with table options:
+Customize your tables with colors, styles, and more using the `--tableOptions` parameter. These options are compatible with [console-table-printer](https://www.npmjs.com/package/console-table-printer) library.
 
 ```bash
-# Use custom column styles
-ctp -i '[{"id":1,"status":"active"},{"id":2,"status":"inactive"}]' --tableOptions '{"columns": [{"name": "status", "color": "green"}]}'
-
-# Change table title
-ctp -i '[{"id":1,"name":"John"}]' --tableOptions '{"title": "Users List"}'
+# Colorize specific columns
+ctp -i '[
+  {"name": "John", "status": "active", "score": 95},
+  {"name": "Jane", "status": "inactive", "score": 82},
+  {"name": "Bob", "status": "active", "score": 78}
+]' --tableOptions '{
+  "title": "Employee Status",
+  "columns": [
+    {"name": "status", "color": "green", "alignment": "right"},
+    {"name": "score", "color": "yellow"}
+  ]
+}'
 ```
+![Complex Example](https://cdn.jsdelivr.net/gh/console-table-printer/table-printer-cli@master/static-resources/3.complex-example1.v1.png)
 
-## Detailed usage
+## Detailed Usage
 
 ```text
 Usage: ctp [options]
 
 Options:
   -i, --input <value>         input string
-  -s, --stdin                 read input from stdin
-  -t, --tableOptions <value>  table options in JSON format
-  -h, --help                  display help for command
+  -s, --stdin                read input from stdin
+  -t, --tableOptions <value> table options in JSON format
+  -h, --help                display help for command
 ```
 
 ## License
