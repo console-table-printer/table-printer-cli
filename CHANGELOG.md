@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/console-table-printer/table-printer-cli/compare/v1.2.1...v1.2.2) (2025-05-31)
+
+
+### Bug Fixes
+
+* Remove program.inp from console log output ([#352](https://github.com/console-table-printer/table-printer-cli/issues/352)) ([0a3ffeb](https://github.com/console-table-printer/table-printer-cli/commit/0a3ffeb7027d75ea139b14335c756af0c5cefa3f))
+
 ## [1.2.1](https://github.com/console-table-printer/table-printer-cli/compare/v1.2.0...v1.2.1) (2025-05-30)
 
 
