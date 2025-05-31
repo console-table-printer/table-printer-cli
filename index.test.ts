@@ -42,7 +42,6 @@ describe('CLI', () => {
     
     runCLI(['node', 'index.js', '-i', input]);
 
-    expect(mockConsoleLog).toHaveBeenCalledWith('program.input', input);
     expect(printTableFromInp).toHaveBeenCalledWith(input, undefined);
   });
 
@@ -54,7 +53,6 @@ describe('CLI', () => {
     
     runCLI(['node', 'index.js', '-i', input, '-t', tableOptions]);
 
-    expect(mockConsoleLog).toHaveBeenCalledWith('program.input', input);
     expect(printTableFromInp).toHaveBeenCalledWith(input, tableOptions);
   });
 
