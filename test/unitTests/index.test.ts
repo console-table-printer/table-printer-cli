@@ -5,7 +5,7 @@ import printTableFromInp from '../../src/service';
 
 // Mock dependencies
 jest.mock('fs');
-jest.mock('../src/service');
+jest.mock('../../src/service');
 jest.mock('commander', () => {
   const mockCommand = {
     option: jest.fn().mockReturnThis(),

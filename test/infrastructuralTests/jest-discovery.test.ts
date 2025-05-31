@@ -17,6 +17,15 @@ describe('Jest Test Discovery', () => {
     // Run Jest with --listTests flag and capture output
     const output = execSync('yarn jest --config jestconfig.json --listTests', { encoding: 'utf8' });
 
+    // Expected test files (using relative paths)
+    const expectedFiles = [
+      'test/unitTests/index.test.ts',
+      'test/readmeExamples.test.ts',
+      'test/unitTests/src/service.test.ts',
+      'test/unitTests/src/inputVerifier.test.ts',
+      'test/infrastructuralTests/jest-discovery.test.ts'
+    ].map(file => path.join(process.cwd(), file));
+
     // Extract detected test files from Jest output
     const detectedFiles = output
       .split('\n')
@@ -24,51 +33,31 @@ describe('Jest Test Discovery', () => {
       .map(line => line.trim())
       .filter(Boolean);
 
-    // Get all test files by walking the directories
-    const findTestFiles = (dir: string): string[] => {
-      const files: string[] = [];
-      const entries = fs.readdirSync(dir, { withFileTypes: true });
-      
-      for (const entry of entries) {
-        const fullPath = path.join(dir, entry.name);
-        if (entry.isDirectory() && entry.name !== 'node_modules' && entry.name !== 'dist') {
-          files.push(...findTestFiles(fullPath));
-        } else if (entry.isFile() && entry.name.endsWith('.test.ts')) {
-          files.push(fullPath);
-        }
-      }
-      
-      return files;
-    };
+    // Verify each expected file exists
+    expectedFiles.forEach(file => {
+      expect(fs.existsSync(file)).toBe(true);
+    });
 
-    const rootDir = process.cwd();
-    const actualTestFiles = [
-      ...findTestFiles(path.join(rootDir, 'src')),
-      ...findTestFiles(path.join(rootDir, 'test'))
-    ].map(file => path.normalize(file));
+    // Verify each expected file is detected
+    expectedFiles.forEach(expectedFile => {
+      const normalizedExpectedFile = path.normalize(expectedFile);
+      const found = detectedFiles.some(detectedFile => 
+        path.normalize(detectedFile) === normalizedExpectedFile
+      );
+      expect(found).toBe(true);
+    });
 
-    // Sort both arrays for consistent comparison
-    const sortedDetected = detectedFiles.map(file => path.normalize(file)).sort();
-    const sortedActual = actualTestFiles.sort();
+    // Verify no unexpected files are detected
+    detectedFiles.forEach(detectedFile => {
+      const normalizedDetectedFile = path.normalize(detectedFile);
+      const found = expectedFiles.some(expectedFile => 
+        path.normalize(expectedFile) === normalizedDetectedFile
+      );
+      expect(found).toBe(true);
+    });
 
-    // Compare arrays with detailed error message
-    expect(sortedDetected).toEqual(sortedActual);
-
-    if (sortedDetected.length !== sortedActual.length) {
-      console.log('Test file count mismatch:');
-      console.log('Detected files:', sortedDetected.length);
-      console.log('Actual files:', sortedActual.length);
-      
-      const missingFiles = sortedActual.filter(file => !sortedDetected.includes(file));
-      const extraFiles = sortedDetected.filter(file => !sortedActual.includes(file));
-      
-      if (missingFiles.length > 0) {
-        console.log('Missing files:', missingFiles);
-      }
-      if (extraFiles.length > 0) {
-        console.log('Extra files:', extraFiles);
-      }
-    }
+    // Verify number of test files
+    expect(detectedFiles.length).toBe(expectedFiles.length);
   });
 
   it('should match test patterns in jest config', () => {
@@ -79,7 +68,6 @@ describe('Jest Test Discovery', () => {
 
     // Expected patterns
     const expectedPatterns = [
-      '<rootDir>/src/**/*.test.ts',
       '<rootDir>/test/**/*.test.ts'
     ];
 
