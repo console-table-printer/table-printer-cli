@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import * as fs from 'fs';
-import { runCLI } from '../index';
-import printTableFromInp from '../src/service';
+import { runCLI } from '../../index';
+import printTableFromInp from '../../src/service';
 
 // Mock dependencies
 jest.mock('fs');
