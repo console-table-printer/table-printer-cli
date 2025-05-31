@@ -7,6 +7,11 @@ import * as fs from 'fs';
 // It is used to ensure that the Jest test discovery is working correctly.
 // It is used to ensure that the Jest test discovery is working correctly.
 
+
+// Why this test is needed:
+// - Because in ci/cd it could be that the jest is not detecting all the tests properly, 
+//   although in local all the tests are detected properly.
+// - Also to make sure the test detection regex is working correctly.
 describe('Jest Test Discovery', () => {
   it('should detect all test files correctly', () => {
     // Run Jest with --listTests flag and capture output
