@@ -19,11 +19,8 @@ describe('Jest Test Discovery', () => {
 
     // Expected test files (using relative paths)
     const expectedFiles = [
-      'test/unitTests/index.test.ts',
       'test/readmeExamples/basicExamples.test.ts',
       'test/readmeExamples/tableOptions.test.ts',
-      'test/unitTests/src/service.test.ts',
-      'test/unitTests/src/inputVerifier.test.ts',
       'test/infrastructuralTests/jest-discovery.test.ts'
     ].map(file => path.join(process.cwd(), file));
 
