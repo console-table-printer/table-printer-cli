@@ -1982,10 +1982,10 @@ confusing-browser-globals@^1.0.10:
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
-console-table-printer@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/console-table-printer/-/console-table-printer-2.14.0.tgz#4c2874933348aaa685f468a51234fafecbb9f97b"
-  integrity sha512-zrY29NkhSoY9SxEynJVWk6zuuI2tGnlS00+Jx+EWkp6QTsyj8W/Zc20awiqVvPj73oP5kX6w5uDW9rle5IznYw==
+console-table-printer@^2.14.1:
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/console-table-printer/-/console-table-printer-2.14.1.tgz#e749c56997ba4a69c5d05495ae52c24187dec7a7"
+  integrity sha512-Nvz+lt5BRvG8qJ8KrqhK0rtbE4hbi0oj4G5/2ig7pbMXBCvy+zcHEZbyIdidl2GEL0AwtxYX4Zc3C28fFSPXyA==
   dependencies:
     simple-wcswidth "^1.0.1"
 
