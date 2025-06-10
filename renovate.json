@@ -24,9 +24,13 @@
   "rangeStrategy": "bump",
   "automerge": true,
   "automergeType": "pr",
+  "automergeStrategy": "fast-forward",
+  "platformAutomerge": true,
   "lockFileMaintenance": {
     "enabled": true
   },
   "semanticCommits": "enabled",
-  "semanticCommitType": "chore"
-}
+  "semanticCommitType": "chore",
+  "prCreation": "immediate",
+  "ignoreTests": false
+} 
