@@ -11,23 +11,19 @@
   "groupSlug": "all",
   "packageRules": [
     {
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
-      "commitMessagePrefix": "chore(deps):"
+      "matchDepTypes": ["dependencies"],
+      "commitMessagePrefix": "fix(deps):",
+      "schedule": "every hour"
     },
     {
       "matchDepTypes": ["devDependencies"],
-      "commitMessagePrefix": "chore(deps-dev):"
-    },
-    {
-      "packagePatterns": [ "*" ],
-      "groupName": "all dependencies",
-      "groupSlug": "all"
+      "commitMessagePrefix": "chore(deps-dev):",
+      "schedule": "before 3am on Monday"
     }
   ],
   "rangeStrategy": "bump",
   "automerge": true,
   "automergeType": "pr",
-  "schedule": "before 3am on Monday",
   "lockFileMaintenance": {
     "enabled": true
   },
