@@ -13,7 +13,7 @@
     {
       "matchDepTypes": ["dependencies"],
       "commitMessagePrefix": "fix(deps):",
-      "schedule": "hourly"
+      "schedule": "at any time"
     },
     {
       "matchDepTypes": ["devDependencies"],
