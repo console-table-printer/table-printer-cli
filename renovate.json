@@ -11,8 +11,8 @@
   "groupSlug": "all",
   "packageRules": [
     {
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
-      "commitMessagePrefix": "chore(deps):"
+      "matchDepTypes": ["dependencies"],
+      "commitMessagePrefix": "fix(deps):"
     },
     {
       "matchDepTypes": ["devDependencies"],
