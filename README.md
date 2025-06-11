@@ -70,10 +70,11 @@ ctp -i '[
 Usage: ctp [options]
 
 Options:
-  -i, --input <value>         input string
-  -s, --stdin                read input from stdin
+  -v, --version              output the current version
+  -i, --input <value>        input string
+  -s, --stdin               read input from stdin
   -t, --tableOptions <value> table options in JSON format
-  -h, --help                display help for command
+  -h, --help               display help for command
 ```
 
 ## License
