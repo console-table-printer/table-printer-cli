@@ -77,21 +77,6 @@ Options:
   -h, --help               display help for command
 ```
 
-## Versioning
-
-This project follows [Semantic Versioning](https://semver.org/) and uses [semantic-release](https://github.com/semantic-release/semantic-release) for automated version management and package publishing. The version number is automatically incremented based on commit messages:
-
-- `fix:` commits trigger a PATCH release (1.0.x)
-- `feat:` commits trigger a MINOR release (1.x.0)
-- `BREAKING CHANGE:` in commit body triggers a MAJOR release (x.0.0)
-
-You can check your installed version using:
-```bash
-ctp --version
-# or
-ctp -v
-```
-
 ## License
 
 [MIT](https://github.com/console-table-printer/table-printer-cli/blob/master/LICENSE)
