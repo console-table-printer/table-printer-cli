@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/console-table-printer/table-printer-cli/compare/v1.2.5...v1.3.0) (2025-06-11)
+
+
+### Features
+
+* Adding version with ctp ([#362](https://github.com/console-table-printer/table-printer-cli/issues/362)) ([44f4406](https://github.com/console-table-printer/table-printer-cli/commit/44f4406715dd73286e5fe2ed2bafb978191c4b65))
+
 ## [1.2.5](https://github.com/console-table-printer/table-printer-cli/compare/v1.2.4...v1.2.5) (2025-06-11)
 
 
