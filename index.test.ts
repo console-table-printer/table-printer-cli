@@ -4,11 +4,11 @@ import { runCLI } from './index';
 import printTableFromInp from './src/service';
 
 // Mock dependencies
-jest.mock('fs');
 jest.mock('./src/service');
 jest.mock('commander', () => {
   const mockCommand = {
     option: jest.fn().mockReturnThis(),
+    version: jest.fn().mockReturnThis(),
     parse: jest.fn().mockReturnThis(),
     opts: jest.fn().mockReturnValue({}),
   };
@@ -23,16 +23,34 @@ describe('CLI', () => {
     mockConsoleLog = jest.spyOn(console, 'log').mockImplementation();
 
     // Reset mocks
-    (fs.readFileSync as jest.Mock).mockReset();
     (printTableFromInp as jest.Mock).mockReset();
     
     // Reset Commander mock
     const mockCommand = new Command();
     (mockCommand.opts as jest.Mock).mockReturnValue({});
+    (mockCommand.version as jest.Mock).mockReset();
+    (mockCommand.option as jest.Mock).mockReset();
+    (mockCommand.parse as jest.Mock).mockReset();
+
+    // Set up default mock returns
+    (mockCommand.version as jest.Mock).mockReturnValue(mockCommand);
+    (mockCommand.option as jest.Mock).mockReturnValue(mockCommand);
+    (mockCommand.parse as jest.Mock).mockReturnValue(mockCommand);
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
+  });
+
+  it('should configure version command with package version', () => {
+    const mockCommand = new Command();
+    runCLI(['node', 'index.js']);
+    
+    expect(mockCommand.version).toHaveBeenCalledWith(
+      expect.any(String),
+      '-v, --version',
+      'output the current version'
+    );
   });
 
   it('should handle input option', () => {
@@ -60,12 +78,17 @@ describe('CLI', () => {
     const input = '[{"id":1,"name":"John"}]';
     const mockCommand = new Command();
     (mockCommand.opts as jest.Mock).mockReturnValue({ stdin: true });
-    (fs.readFileSync as jest.Mock).mockReturnValue({ toString: () => input });
+    
+    // Mock fs.readFileSync only for this test
+    const mockReadFileSync = jest.spyOn(fs, 'readFileSync')
+      .mockReturnValue(Buffer.from(input));
     
     runCLI(['node', 'index.js', '-s']);
 
-    expect(fs.readFileSync).toHaveBeenCalledWith(0);
+    expect(mockReadFileSync).toHaveBeenCalledWith(0);
     expect(printTableFromInp).toHaveBeenCalledWith(input, undefined);
+    
+    mockReadFileSync.mockRestore();
   });
 
   it('should show error when no input option is provided', () => {
