@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/console-table-printer/table-printer-cli/compare/v1.2.4...v1.2.5) (2025-06-11)
+
+
+### Bug Fixes
+
+* Update console-table-printer@2.14.3 ([#361](https://github.com/console-table-printer/table-printer-cli/issues/361)) ([1725473](https://github.com/console-table-printer/table-printer-cli/commit/1725473f2618fa30a6ab019388a75012311525fc))
+
 ## [1.2.4](https://github.com/console-table-printer/table-printer-cli/compare/v1.2.3...v1.2.4) (2025-06-01)
 
 
