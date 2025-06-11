@@ -6,15 +6,29 @@ import * as path from 'path';
 import printTableFromInp from './src/service';
 
 // Read package.json to get version
-const packageJson = JSON.parse(
-  fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8')
-);
+let packageVersion = '0.0.0-dev'; // More descriptive default version
+try {
+  // Try to read from dist's parent directory first (for global installs)
+  const packagePath = path.join(__dirname, '..', 'package.json');
+  const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+  packageVersion = packageJson.version;
+} catch (error) {
+  try {
+    // Fallback to current directory (for development)
+    const packagePath = path.join(__dirname, 'package.json');
+    const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+    packageVersion = packageJson.version;
+  } catch (error) {
+    // More descriptive warning message
+    console.warn('Warning: Could not find package.json in either dist parent directory or current directory. Using default version.');
+  }
+}
 
 export function runCLI(argv: string[] = process.argv) {
   const program = new Command();
 
   program
-    .version(packageJson.version, '-v, --version', 'output the current version')
+    .version(packageVersion, '-v, --version', 'output the current version')
     .option('-i, --input <value>', 'input string')
     .option('-s, --stdin', 'read input from stdin')
     .option('-t, --tableOptions <value>', 'table options in JSON format')
