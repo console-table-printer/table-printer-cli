@@ -6,7 +6,7 @@ import * as path from 'path';
 import printTableFromInp from './src/service';
 
 // Read package.json to get version
-let packageVersion = '0.0.0';
+let packageVersion = '0.0.0-dev'; // More descriptive default version
 try {
   // Try to read from dist's parent directory first (for global installs)
   const packagePath = path.join(__dirname, '..', 'package.json');
@@ -19,8 +19,8 @@ try {
     const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
     packageVersion = packageJson.version;
   } catch (error) {
-    // Use default version if package.json cannot be found
-    console.warn('Warning: Could not read package.json, using default version');
+    // More descriptive warning message
+    console.warn('Warning: Could not find package.json in either dist parent directory or current directory. Using default version.');
   }
 }
 
