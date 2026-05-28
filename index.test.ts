@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import * as fs from 'fs';
+import fs = require('fs');
 import { runCLI } from './index';
 import printTableFromInp from './src/service';
 
@@ -95,4 +95,4 @@ describe('CLI', () => {
     runCLI(['node', 'index.js']);
     expect(mockConsoleLog).toHaveBeenCalledWith('Error: Cant detect input option');
   });
-}); 
+});
