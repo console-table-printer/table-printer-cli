@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/console-table-printer/table-printer-cli/compare/v1.3.2...v1.3.3) (2026-06-01)
+
+
+### Bug Fixes
+
+* Update deps and readme ([#369](https://github.com/console-table-printer/table-printer-cli/issues/369)) ([4871400](https://github.com/console-table-printer/table-printer-cli/commit/487140094780171324dedbb3e5ad2d7a6f25d4ad))
+
 ## [1.3.2](https://github.com/console-table-printer/table-printer-cli/compare/v1.3.1...v1.3.2) (2026-05-28)
 
 
